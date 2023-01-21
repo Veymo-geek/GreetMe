@@ -8,7 +8,7 @@
   <title>GreeteingsApp</title>
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/fontello.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style.scss" rel="stylesheet">
   <script src="js/jquery-3.6.1.min.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/script.js"></script>
@@ -17,11 +17,11 @@
 
 <body>
   <header>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary ">
-      <div class="container-fluid col-lg-8 mx-auto ">
+    <nav class="navbar navbar-expand bg-body-tertiary">
+      <div class="container-fluid col-sm-8 mx-auto">
         <a class="navbar-brand " href="#">Navbar</a>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+        <div class="collapse navbar-collapse d-flex" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="#">Генератор</a>
             </li>
@@ -37,22 +37,91 @@
 
 
   <main>
-    <div class="container-sm col-lg-8 mx-auto p-3 ">
+    <div class="container-sm col-sm-8 mx-auto p-3 ">
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="#">Головна</a></li>
           <li class="breadcrumb-item active" aria-current="page">Генератор</li>
         </ol>
       </nav>
-      <h1 class="py-md-5">Згенеруй привітання!</h1>
-        <div class="input-group mb-3">
-
-          <input type="text" class="form-control" id="promt" placeholder="Введіть запит" aria-label="Recipient's username"
-            aria-describedby="button-addon2">
-          <button class="btn btn-outline-secondary" type="button" id="button-addon2" onclick="setPromt()">Button</button>
+      <div class="row py-md-5 align-items-center">
+        <div class="col-md-8 ">
+          <h1>Ласкаво просимо до MyCongratulation!</h1>
+          <p>MyCongratulation - це революційний інструмент штучного інтелекту, який допоможе вам швидко згенерувати
+            яскраві та щирі привітання зі святами для близьких людей.</p>
         </div>
+        <div class="col-md-4 my-4 text-center">
+          <img src="img/mainPage_baloons.svg" alt="Зображення жінки з кульками">
+        </div>
+
+
+      </div>
+      <div class="card">
+        <div class="card-body p-sm-5">
+          <div class="row mb-3">
+            <label for="Select3" class="col-lg-3 col-md-4 col-form-label ">Cвято:</label>
+            <div class=" col-lg-9 col-md-8">
+              <select class="form-select" id="Select3" aria-label="Default select example">
+                <option selected>День народження</option>
+                <option value="1">Новий рік</option>
+                <option value="2">8 березня</option>
+                <option value="3">Звичайний день</option>
+              </select>
+            </div>
+          </div>
+          <fieldset class="row mb-3">
+            <legend class="col-form-label col-lg-3 col-md-4 pt-0">Для кого:</legend>
+            <div class="col-lg-9 col-md-8">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                <label class="form-check-label" for="gridRadios1">
+                  Чоловік
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                <label class="form-check-label" for="gridRadios2">
+                  Жінка
+                </label>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset class="row mb-3">
+            <legend class="col-form-label col-lg-3 col-md-4 pt-0">Звертання:</legend>
+            <div class="col-lg-9 col-md-8">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="gridRadios1" id="gridRadios3" value="option3"
+                  checked>
+                <label class="form-check-label" for="gridRadios3">
+                  Ти
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="gridRadios1" id="gridRadios4" value="option4">
+                <label class="form-check-label" for="gridRadios4">
+                  Ви
+                </label>
+              </div>
+            </div>
+          </fieldset>
+          <a href="#" class="btn btn-primary col-12" onclick="setPromt()">Згенерувати</a>
+        </div>
+      </div>
     </div>
   </main>
+
+  <footer>
+    <div class=" mx-auto p-3">
+      <footer class="d-flex flex-wrap justify-content-between align-items-center pt-3 mt-4 border-top">
+        <p class="col-md-4 mb-0 text-muted">&copy; 2022 Company, Inc</p>
+
+        <ul class="nav col-md-8 justify-content-end">
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Генератор</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Про нас</a></li>
+        </ul>
+      </footer>
+    </div>
+  </footer>
 
 </body>
 
