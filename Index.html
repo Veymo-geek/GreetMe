@@ -46,11 +46,11 @@
       </nav>
       <div class="row py-md-5 align-items-center">
         <div class="col-md-8 ">
-          <h1 class="text-primary">Ласкаво просимо до MyCongratulation!</h1>
-          <p>MyCongratulation - це революційний інструмент штучного інтелекту, який допоможе вам швидко згенерувати
+          <h1 class="text-primary display-6 mb-3">Ласкаво просимо до MyCongratulation!</h1>
+          <p class="text-muted">MyCongratulation - це революційний інструмент штучного інтелекту, який допоможе вам швидко згенерувати
             яскраві та щирі привітання зі святами для близьких людей.</p>
         </div>
-        <div class="col-md-4 my-4 text-center">
+        <div class="col-md-4 my-4 text-center d-none d-md-block">
           <img src="img/mainPage_baloons.svg" alt="Зображення жінки з кульками">
         </div>
 
@@ -71,8 +71,15 @@
           </div>
           <fieldset class="row mb-3">
             <legend class="col-form-label col-lg-3 col-md-4 pt-0">Для кого:</legend>
-            <div class="col-lg-9 col-md-8">
-              <div class="form-check">
+            <div class="col-lg-9 d-grid gap-2 col-md-8">
+              <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+                <label class="btn btn-outline-primary" for="btnradio1">Чоловік</label>
+              
+                <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+                <label class="btn btn-outline-primary" for="btnradio2">Жінка</label>
+              </div>
+              <!-- <div class="form-check">
                 <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
                 <label class="form-check-label" for="gridRadios1">
                   Чоловік
@@ -83,13 +90,21 @@
                 <label class="form-check-label" for="gridRadios2">
                   Жінка
                 </label>
-              </div>
+              </div> -->
             </div>
           </fieldset>
           <fieldset class="row mb-3">
             <legend class="col-form-label col-lg-3 col-md-4 pt-0">Звертання:</legend>
-            <div class="col-lg-9 col-md-8">
-              <div class="form-check">
+            <div class="col-lg-9 d-grid gap-2 col-md-8">
+              <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                <input type="radio" class="btn-check" name="btnradio1" id="btnradio3" autocomplete="off" checked>
+                <label class="btn btn-outline-primary" for="btnradio3">Ти</label>
+              
+                <input type="radio" class="btn-check" name="btnradio1" id="btnradio4" autocomplete="off">
+                <label class="btn btn-outline-primary" for="btnradio4">Ви</label>
+            
+              </div>
+              <!-- <div class="form-check">
                 <input class="form-check-input" type="radio" name="gridRadios1" id="gridRadios3" value="option3"
                   checked>
                 <label class="form-check-label" for="gridRadios3">
@@ -101,7 +116,7 @@
                 <label class="form-check-label" for="gridRadios4">
                   Ви
                 </label>
-              </div>
+              </div> -->
             </div>
           </fieldset>
           <a href="#" class="btn btn-primary col-12" onclick="setPromt()">Згенерувати</a>
